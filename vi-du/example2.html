@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<style>
+		.warper{
+			width: 960px;
+			margin: 0 auto;
+		}
+		.post{
+			width: 748px;
+			margin: 10px auto;
+			padding: 10px;
+			margin-top: 20px;
+			padding-bottom: 20px;
+		}
+		.post img{
+			float: left;
+		}
+		img.attachment-150x100.size-150x100.wp-post-image {
+		    width: 150px;
+		    height: 100px;
+		    padding: 4px;
+		}	
+		.post-hover{
+			background: #ccc !important;
+			display: block !important;
+			overflow:hidden !important;
+		}
+		img.hover{
+			border: 2px solid #00A651;
+			cursor: pointer;
+		}
+		.h2-hover{
+			color: #eb6100 !important;
+		}
+		.tuvan-hover{
+			background-color: #00A651 !important;
+		}
+		.xthem-hover{
+			background-color: #ccc !important;
+		}
+
+		.post .content {
+		    float: right;
+		    width: 77%;
+		}	
+		.post h2 {
+		    font-size: 18px;
+		    margin: 10px auto;
+		    padding: 0;
+		}		
+		.post .content h2 a {
+		    color: #5b5b5b;
+		    line-height: 1.2;
+		    float: none;
+		    clear: both;
+		    display: inline;
+		    text-transform: capitalize;
+		    font-size: 15px;
+		    font-weight: bold;
+		}
+		.post .entry {
+		    line-height: 25px;
+		    margin-top: 5px;
+		    margin-bottom: 8px;
+		}
+		.tuvan {
+		    background-color: #666;
+		    margin-right: 10px;
+		}
+		.xemthem_btn{
+			background-color: #00A651;
+		}
+		.tuvan, .xemthem_btn {
+		    float: right;
+		    padding: 5px 10px;
+		}		
+		.tuvan a, .xemthem_btn a {
+		    color: #fff;
+		    font-size: 13px;
+		}								
+	</style>
+</head>
+<body>
+	<script>
+		$(function(){
+			$('.post').on('mouseenter',function(){
+				$(this).find('img').addClass('hover').animate('slow');
+				$(this).find('h2>a').addClass('h2-hover');
+				$(this).find('.tuvan').addClass('tuvan-hover');
+				$(this).find('.xemthem_btn').addClass('xthem-hover');
+			});	
+			$('.post').on('mouseleave',function(){
+				$(this).find('img').removeClass('hover');
+				$(this).find('h2>a').removeClass('h2-hover');
+				$(this).find('.tuvan').removeClass('tuvan-hover');
+				$(this).find('.xemthem_btn').removeClass('xthem-hover');
+			});	
+		});
+	</script>
+	<div class="warper">
+		<div class="post">
+			<div class="image">
+				<img width="150" height="100" src="http://khambenhapollo.com/wp-content/uploads/2016/01/viem-lo-tuyen-co-tu-cung-1.jpg" class="attachment-150x100 size-150x100 wp-post-image" alt="viem-lo-tuyen-co-tu-cung">
+			</div>
+			<div class="content">			
+				<h2 id="post-1510"><a href="#">Phương pháp LEEP điều trị dứt điểm viêm lộ tuyến cổ tử cung</a></h2>
+				<div class="entry">
+					Viêm lộ tuyến tử cung là bệnh thường xảy ra ở cổ tử cung của nữ giới. Nếu không điều trị dứt điểm, bệnh sẽ ảnh hưởng đến việc mang ... 
+				</div>
+				<span class="xemthem_btn"><a href="#"> Xem Thêm </a></span>
+				<span class="tuvan"><a href="#" class="seoquake-nofollow">Tư Vấn</a></span>					
+			</div>
+		</div>
+		<div class="post">
+			<div class="image">
+				<img width="150" height="100" src="http://khambenhapollo.com/wp-content/uploads/2016/01/viem-lo-tuyen-co-tu-cung-1.jpg" class="attachment-150x100 size-150x100 wp-post-image" alt="viem-lo-tuyen-co-tu-cung">
+			</div>
+			<div class="content">			
+				<h2 id="post-1510"><a href="http://khambenhapollo.com/phuong-phap-leep-dieu-tri-dut-diem-viem-lo-tuyen-co-tu-cung/">Phương pháp LEEP điều trị dứt điểm viêm lộ tuyến cổ tử cung</a></h2>
+				<div class="entry">
+					Viêm lộ tuyến tử cung là bệnh thường xảy ra ở cổ tử cung của nữ giới. Nếu không điều trị dứt điểm, bệnh sẽ ảnh hưởng đến việc mang ... 
+				</div>
+				<span class="xemthem_btn"><a href="#"> Xem Thêm </a></span>
+				<span class="tuvan"><a href="#" class="seoquake-nofollow">Tư Vấn</a></span>					
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

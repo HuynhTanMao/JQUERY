@@ -3,8 +3,64 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tiêu đề</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<style>
+		.warper{
+			width: 960px;
+			margin:0 auto;
+		}
+		.photos{
+			display: none;
+		}
+		.photos li{
+			list-style: none;
+			float: left;
+			margin-right: 10px;
+			position: relative;
+		}
+		.photos li span{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			color: #fff;
+			background: rgba(0,0,0,.27);
+			display: none;
+			width: 100%;
+		}
+		.button{
+			width: 100px;
+			height: 50px;
+			background: #ccc;
+			color: black;
+			border: 1px solid #fff;
+		}
+	</style>
 </head>
 <body>
-	
+	<script>
+		$(function(){
+			$('button').click(function(){
+				$('.photos').slideToggle();
+			})		
+			$('.photos').on('mouseenter','li',function(){
+				$(this).find('span').slideToggle();
+			})
+		});
+	</script>
+	<div class="warper">
+		<button class="button">hiện hình ảnh</button>
+		<ul class="photos">
+			<li>
+				<img src="../hinh/paris1.jpg" alt="paris 1">
+				<span>hình 1</span>
+			</li>
+			<li><img src="../hinh/paris2.jpg" alt="paris 2">
+				<span>hình 2</span>
+			</li>
+			<li><img src="../hinh/paris3.jpg" alt="paris 3">
+				<span>hình 3</span>
+			</li>
+		</ul>
+	</div>
 </body>
 </html>
